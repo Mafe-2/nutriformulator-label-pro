@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriFormulator & Label Pro — Skill de IA para Ingeniería de Alimentos</title>
+  <meta name="description" content="Skill de Inteligencia Artificial para Ingeniería de Alimentos: Matriz de cálculo nutricional por porción y 100g, optimización de fórmulas y etiquetado legal con octógonos de advertencia.">
+  <meta name="keywords" content="Ingeniería de Alimentos, Formulación de Alimentos, Etiquetado Nutricional, Octógonos, Ley 30021, Inteligencia Artificial, Food Science">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo-wrapper">
+        <div class="logo-icon">🥗</div>
+        <div class="logo-title">NutriFormulator <span>& Label Pro</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#capacidades">Capacidades</a></li>
+        <li><a href="#laboratorio">Simulador Interactivo</a></li>
+        <li><a href="#desarrollo">Desarrollo Paso a Paso</a></li>
+        <li><a href="#recursos">Recursos & Video</a></li>
+        <li><a href="#autor">Autora</a></li>
+      </ul>
+      <a href="#laboratorio" class="btn nav-cta">Probar Simulador</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-content">
+          <div class="badge-tag">
+            <span>✨</span> Food Tech & BioEngineering AI
+          </div>
+          <h1 class="hero-title">
+            Asistente de IA Especialista en <span class="gradient-text">Formulación y Rotulado Legal</span> de Alimentos
+          </h1>
+          <p class="hero-subtitle">
+            Automatiza y optimiza el cálculo de tablas nutricionales, sugiere sustitutos funcionales para remover sellos de advertencia frontal y redacta listas de ingredientes en estricto cumplimiento normativo.
+          </p>
+          <div class="hero-actions">
+            <a href="#laboratorio" class="btn btn-primary" id="btnHeroSimular">
+              <span>🔬</span> Abrir Laboratorio de Formulación
+            </a>
+            <a href="#desarrollo" class="btn btn-outline">
+              <span>⚙️</span> Metodología del Proyecto
+            </a>
+          </div>
+        </div>
+        <div class="hero-card-preview">
+          <div class="hero-img-box">
+            <img src="assets/hero.jpg" alt="Laboratorio de Inteligencia Artificial para Ingeniería de Alimentos y Formulación Nutricional">
+          </div>
+          <div class="hero-floating-stat">
+            <div class="stat-icon">⚡</div>
+            <div class="stat-info">
+              <h4>100% Automatizado</h4>
+              <p>Cálculo de octógonos & tabla nutricional</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Core Capabilities Section -->
+  <section class="features-section" id="capacidades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Capacidades Técnicas</span>
+        <h2 class="section-title">¿Qué Resuelve esta Skill de IA?</h2>
+        <p class="section-desc">Diseñada especialmente para agilizar las tareas más críticas y repetitivas de los ingenieros de alimentos y equipos de I+D.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <div class="card-icon">📊</div>
+          <h3>Matriz de Cálculo Nutricional</h3>
+          <p>
+            Genera automáticamente la tabla nutricional estandarizada tanto por porción de consumo sugerida como por cada 100 g o 100 ml de producto terminado, calculando energía total (kcal), macronutrientes y micronutrientes.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">🧪</div>
+          <h3>Optimización de Fórmulas</h3>
+          <p>
+            Sugiere reajustes técnicos e ingredientes sustitutos (como agentes de carga, fibras prebióticas o edulcorantes naturales) para alcanzar metas de reformulación como la reducción del 30% al 40% de azúcar o sodio sin perder textura ni palatabilidad.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">🏷️</div>
+          <h3>Borrador Legal y Sellos Frontales</h3>
+          <p>
+            Ordena automáticamente la lista de ingredientes de mayor a menor peso según la normativa internacional (Codex Alimentarius) e identifica en tiempo real si el producto requiere sellos o advertencias frontales (octógonos nutricionales).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Lab / Simulator Section -->
+  <section class="lab-section" id="laboratorio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simulador en Tiempo Real</span>
+        <h2 class="section-title">Laboratorio Interactivo de Formulación</h2>
+        <p class="section-desc">Selecciona un producto base, modifica sus ingredientes o activa las optimizaciones con IA para observar cómo se recalculan los valores nutricionales y las advertencias legales.</p>
+      </div>
+
+      <div class="lab-container">
+        <!-- Lab Toolbar -->
+        <div class="lab-toolbar">
+          <div class="preset-selector-group">
+            <label for="presetSelector">Receta Preset:</label>
+            <select id="presetSelector" class="select-control">
+              <option value="galleta_tradicional">Galleta de Avena y Cacao (Sólido)</option>
+              <option value="bebida_chocolatada">Bebida Láctea Chocolatada (Líquido)</option>
+              <option value="snack_maiz">Snack Horneado de Maíz (Alto en Sodio)</option>
+              <option value="barra_funcional">Barra Proteica Funcional (Clean Label)</option>
+            </select>
+          </div>
+          <div class="quick-actions">
+            <button class="btn-ai-optimize" id="btnOptimizeSugar" title="Aplica sustitutos de azúcar">
+              <span>🌱</span> -40% Azúcar (IA)
+            </button>
+            <button class="btn-ai-optimize" id="btnOptimizeSodium" title="Aplica sustitutos de sodio">
+              <span>🧂</span> -50% Sodio (IA)
+            </button>
+            <button class="btn-ai-optimize" id="btnResetFormula" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); color: #fff;">
+              <span>🔄</span> Restaurar
+            </button>
+          </div>
+        </div>
+
+        <!-- Lab Main Grid -->
+        <div class="lab-body">
+          <!-- Left Column: Formulation Input -->
+          <div class="lab-panel-left">
+            <div class="panel-subheading">
+              <span>📋 Composición de Ingredientes (Base 100g)</span>
+            </div>
+            <div class="ingredients-table-wrap">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th>Ingrediente</th>
+                    <th>Peso (g)</th>
+                    <th>Azúcares (g)</th>
+                    <th>G. Sat (g)</th>
+                    <th>Sodio (mg)</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="ingredientsTableBody">
+                  <!-- Generated dynamically via app.js -->
+                </tbody>
+              </table>
+            </div>
+
+            <button class="btn-add-ing" id="btnAddIngredient">
+              + Agregar Ingrediente a la Mezcla
+            </button>
+
+            <!-- AI Insight Box -->
+            <div class="ai-insight-box">
+              <div class="ai-insight-header">
+                <span>🤖</span> <span id="aiInsightTitle">Diagnóstico Técnico del Asistente</span>
+              </div>
+              <p id="aiInsightText">
+                La formulación base se encuentra lista para análisis. Modifica los gramos o prueba los botones superiores de optimización automática con IA para ajustar la matriz nutricional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Nutritional & Regulatory Output -->
+          <div class="lab-panel-right">
+            <!-- Warning Octagons Showcase -->
+            <div class="octagons-showcase">
+              <div class="octagons-title">
+                <span>Sellos de Advertencia Frontal Requeridos</span>
+                <small style="text-transform: none; font-weight: normal; color: var(--text-dim);">Norma Ley 30021 / Fase 2</small>
+              </div>
+              <div class="octagons-row" id="octagonsContainer">
+                <!-- Generated dynamically via app.js -->
+              </div>
+            </div>
+
+            <!-- Standard Nutrition Facts Panel -->
+            <div class="nutrition-facts-card">
+              <div class="nf-header">
+                <div class="nf-title">INFORMACIÓN NUTRICIONAL</div>
+                <div class="nf-subtitle">
+                  <span>Tamaño de Porción: <strong id="nfServingSize">30 g</strong></span>
+                  <span>Por 100g / Por Porción</span>
+                </div>
+              </div>
+              <div class="nf-calories-row">
+                <div class="cal-label">Energía / Calorías</div>
+                <div class="cal-value"><span id="nfCalories">380</span> <small style="font-size: 1rem; font-weight: bold;">kcal / 100g</small></div>
+              </div>
+              <table class="nf-table">
+                <thead>
+                  <tr>
+                    <th>Nutriente</th>
+                    <th>Por 100 g</th>
+                    <th>Por Porción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Grasas Totales</strong></td>
+                    <td id="nfFat100">15.2 g</td>
+                    <td id="nfFatServing">4.6 g</td>
+                  </tr>
+                  <tr>
+                    <td class="indent">Grasas Saturadas</td>
+                    <td id="nfSatFat100">9.3 g</td>
+                    <td id="nfSatFatServing">2.8 g</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Carbohidratos Totales</strong></td>
+                    <td id="nfCarb100">65.6 g</td>
+                    <td id="nfCarbServing">19.7 g</td>
+                  </tr>
+                  <tr>
+                    <td class="indent">Azúcares Totales</td>
+                    <td id="nfSugar100">26.7 g</td>
+                    <td id="nfSugarServing">8.0 g</td>
+                  </tr>
+                  <tr>
+                    <td class="indent">Fibra Dietética</td>
+                    <td id="nfFiber100">3.7 g</td>
+                    <td id="nfFiberServing">1.1 g</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Proteínas</strong></td>
+                    <td id="nfProt100">6.7 g</td>
+                    <td id="nfProtServing">2.0 g</td>
+                  </tr>
+                  <tr class="thick-line">
+                    <td><strong>Sodio</strong></td>
+                    <td id="nfSodium100">318 mg</td>
+                    <td id="nfSodiumServing">95 mg</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Legal Ingredients Draft -->
+            <div class="legal-list-card">
+              <h4>
+                <span>Borrador Legal de Ingredientes (Orden Decreciente)</span>
+                <button class="btn-copy" id="btnCopyLegal">Copiar Texto</button>
+              </h4>
+              <p id="legalIngredientsList">Cargando ingredientes...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step-by-Step Project Development Section -->
+  <section class="steps-section" id="desarrollo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Metodología & Arquitectura</span>
+        <h2 class="section-title">Desarrollo del Proyecto Paso a Paso</h2>
+        <p class="section-desc">Integración sinérgica de herramientas de Inteligencia Artificial para la concepción, diseño y despliegue del asistente.</p>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-card">
+          <div class="step-badge">1</div>
+          <span class="step-tool">Gemini</span>
+          <h3>Investigación y Concepción</h3>
+          <p>
+            Definición conceptual y técnica de la Skill aplicada a la Ingeniería de Alimentos, delimitando los casos de uso regulatorios, factores de conversión y reglas matemáticas de formulación.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">2</div>
+          <span class="step-tool">ChatGPT</span>
+          <h3>Diseño Conceptual</h3>
+          <p>
+            Estructuración detallada de los contenidos didácticos, arquitectura de la información y guion visual para la infografía técnica informativa del proyecto.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">3</div>
+          <span class="step-tool">Flow</span>
+          <h3>Producción Audiovisual</h3>
+          <p>
+            Generación y edición del video explicativo (30-60 segundos) que sintetiza la propuesta de valor, los beneficios para la industria y la experiencia de usuario.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">4</div>
+          <span class="step-tool">Antigravity + Opencode</span>
+          <h3>Desarrollo Web</h3>
+          <p>
+            Diseño, maquetación y programación de la Landing Page moderna y su simulador interactivo de balance de masa y cálculo de octógonos en tiempo real.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">5</div>
+          <span class="step-tool">GitHub</span>
+          <h3>Control de Versiones y Alojamiento</h3>
+          <p>
+            Estructuración del repositorio oficial, documentación integral mediante README.md y despliegue para acceso público e institucional.
+          </p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-badge">6</div>
+          <span class="step-tool">Gemini</span>
+          <h3>Integración y Pruebas</h3>
+          <p>
+            Validación técnica final del comportamiento de la Skill de IA con recetas complejas, verificación de límites normativos y refinamiento de respuestas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media & Resources Section -->
+  <section class="media-section" id="recursos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Material Audiovisual & Gráfico</span>
+        <h2 class="section-title">Enlaces y Recursos del Proyecto</h2>
+        <p class="section-desc">Accede al video demostrativo y al material infográfico desarrollado para el proyecto.</p>
+      </div>
+
+      <div class="media-grid">
+        <!-- Video Card -->
+        <div class="media-card">
+          <div>
+            <h3>🎬 Video Explicativo (30-60 seg)</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
+              Resumen audiovisual de la propuesta de valor de NutriFormulator & Label Pro realizado con Flow.
+            </p>
+            <div class="video-player-mockup">
+              <img src="assets/hero.jpg" alt="Video preview de la Skill">
+              <div class="play-button-overlay" onclick="alert('Enlace al video del proyecto: https://flow.com o YouTube (listo para vincular)');">
+                ▶
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn btn-outline" style="width: 100%; justify-content: center;" onclick="alert('Puedes reemplazar este enlace con la URL de tu video final en YouTube o Flow'); return false;">
+            Ver Video Completo en Flow / YouTube
+          </a>
+        </div>
+
+        <!-- Infographic Card -->
+        <div class="media-card">
+          <div>
+            <h3>📊 Infografía Informativa del Proyecto</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
+              Diagrama de flujo visual y guía del proceso de formulación inteligente y normativo en la industria de alimentos.
+            </p>
+            <div class="infographic-preview">
+              <img src="assets/mockup.jpg" alt="Infografía del proyecto y packaging mockup">
+            </div>
+          </div>
+          <a href="assets/mockup.jpg" target="_blank" class="btn btn-outline" style="width: 100%; justify-content: center;">
+            Descargar Infografía en Alta Resolución
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author Section -->
+  <section class="author-section" id="autor">
+    <div class="container">
+      <div class="author-card">
+        <div class="author-avatar">
+          MF
+        </div>
+        <div class="author-details">
+          <h3>Maria Fernanda Silva</h3>
+          <div class="author-title">Estudiante / Ingeniera de Alimentos</div>
+          <p class="author-bio">
+            Apasionada por la innovación alimentaria, el desarrollo de alimentos funcionales, el diseño de empaques sostenibles y la integración de Inteligencia Artificial para la optimización de procesos de formulación y cumplimiento regulatorio en la industria.
+          </p>
+          <div class="author-badges">
+            <span class="author-badge-item">🥗 Ingeniería de Alimentos</span>
+            <span class="author-badge-item">🤖 IA Aplicada a BioProcesos</span>
+            <span class="author-badge-item">📜 Regulación & Rotulado Legal</span>
+            <span class="author-badge-item">💡 Formulación Limpia (Clean Label)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 <strong>NutriFormulator & Label Pro</strong> — Proyecto de Innovación en Ingeniería de Alimentos con Inteligencia Artificial.</p>
+      <p style="margin-top: 6px; font-size: 0.8rem; color: #475569;">Desarrollado con Antigravity & Opencode • Repositorio Oficial</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
